@@ -1,0 +1,340 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:linear-gradient(to bottom,#07152d,#b11313);
+height:100vh;
+overflow:hidden;
+}
+
+#pantallaCarga{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:28px;
+z-index:999;
+}
+
+#contenidoPrincipal{
+display:none;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.tarjeta{
+background:white;
+width:500px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0px 0px 20px rgba(0,0,0,.4);
+}
+
+h2{
+color:#b11313;
+font-size:30px;
+}
+
+button{
+margin:15px;
+padding:15px 35px;
+border:none;
+border-radius:12px;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+#btnSi{
+background:#18a63b;
+color:white;
+}
+
+#btnSi:hover{
+transform:scale(1.1);
+}
+
+#btnNo{
+background:#d62828;
+color:white;
+}
+
+#btnNo:hover{
+transform:scale(1.1);
+}
+
+/* Telaraña bajando */
+.telarana{
+position:absolute;
+top:-200px;
+width:120px;
+animation:bajarTelarana 3s forwards;
+}
+
+@keyframes bajarTelarana{
+
+from{  
+    top:-200px;  
+}  
+
+to{  
+    top:0;  
+}
+
+}
+
+/* Spider-Man entrando */
+.spiderman{
+
+position:absolute;  
+top:-100px;  
+font-size:80px;  
+animation:bajarSpiderman 3s forwards;
+
+}
+
+@keyframes bajarSpiderman{
+
+from{  
+    top:-100px;  
+}  
+
+to{  
+    top:80px;  
+}
+
+}
+
+/* Latido del botón Sí */
+.latido{
+
+animation:latir .8s infinite;
+
+}
+
+@keyframes latir{
+
+0%{  
+    transform:scale(1);  
+}  
+
+50%{  
+    transform:scale(1.2);  
+}  
+
+100%{  
+    transform:scale(1);  
+}
+
+}
+
+/* Pantalla final */
+
+.final{
+
+height:100vh;  
+background:linear-gradient(#07152d,#b11313);  
+color:white;  
+display:flex;  
+flex-direction:column;  
+justify-content:center;  
+align-items:center;  
+text-align:center;  
+padding:30px;
+
+}
+
+.final h1{
+
+font-size:45px;  
+margin-bottom:30px;
+
+}
+
+.final p{
+
+font-size:25px;  
+max-width:700px;  
+line-height:1.5;
+
+}
+
+/* Corazones cayendo */
+
+.corazon{
+
+    position:fixed;
+    top:-60px;
+    font-size:50px;
+    z-index:99999;
+
+    animation:caer 5s linear forwards;
+
+}
+
+
+@keyframes caer{
+
+    from{
+        top:-60px;
+        opacity:1;
+    }
+
+    to{
+        top:100vh;
+        opacity:0;
+    }
+
+}
+
+.guardando{
+
+    height:100vh;
+    background:black;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.guardando h1{
+
+    font-size:40px;
+
+}
+
+.spidermanFinal{
+    width: 260px;
+    max-width: 90%;
+    margin-bottom: 20px;
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ========================= */
+/* TARJETA DE LA CITA */
+/* ========================= */
+
+.oculto{
+    display:none;
+}
+
+#cita{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(to bottom,#07152d,#000000);
+}
+
+.tarjeta-cita{
+    width:500px;
+    max-width:90%;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.12);
+    border-radius:25px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 0 30px rgba(255,255,255,.3);
+}
+
+.tarjeta-cita h1{
+    font-size:42px;
+}
+
+.tarjeta-cita p{
+    font-size:24px;
+}
+
+#confirmar{
+    margin-top:25px;
+    padding:14px 35px;
+
+    border:none;
+    border-radius:30px;
+
+    background:#b11313;
+    color:white;
+
+    font-size:22px;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#confirmar:hover{
+    transform:scale(1.08);
+    background:#d61c1c;
+}
+
+#gracias{
+    margin-top:25px;
+    color:#7CFC90;
+    font-size:20px;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+.fade-out{
+    animation:desvanecer 2s forwards;
+}
+
+@keyframes desvanecer{
+
+    from{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+
+}
